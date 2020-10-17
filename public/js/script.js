@@ -2,7 +2,6 @@ $(document).ready(function(){
     showMainCategories()
  showProductsByCategory()
     showCategories()
-
 })
 
 function showMainCategories() {
@@ -44,21 +43,20 @@ function showProductsByCategory(categoryId) {
                  '<img src="'+product.image_path+'">'+
 	             '<figcaption>'+product.namep+'</figcaption>'
 	             if(product.onsale===true){
-	            var price_new=product.price-(product.price*product.commsale/100)
+	            var price_new=parseFloat(product.price-(product.price*product.commsale/100))
 	            console.log(price_new)
-                html= html+ '<span class="price_old">'+product.price+' RON</span> <br>'+
+                html= html+ '<span class="price_old">'+product.price+' RON</span> '+
                  '<span class="price_new">'+price_new+' RON</span>'
 	             }
 	             else{
 	            html= html+ '<span class="price">'+product.price+' RON</span>'
 	             }
-	             	            
-
+	             	           
 	            html=html+ 
 	            '<div>'+
 	            '<button id="button1">Detalii</button>'+
-	            '<a id="button" href="/comanda.html">Cumpara</a>'+
-	            '</div>'+
+	            '<button type="submit" method="post" id="button" onclick="createRecord('+product.id+')">Cumpara</button>'+
+	            '</div>'
                  +'<div>'
                  +'<div id="myModal" class="modal">'
 
@@ -66,7 +64,7 @@ function showProductsByCategory(categoryId) {
                  +'<span class="close">&times;</span>'
                  +'<p> Detalii produs </p>' 
                  +'<p>'+product.descriptionp+'</p>'
-                 +'<button id="button1" onClick=window.location.href ="/comanda.html"">Cumpara</button>'
+                 +'<button type="submit" method="post" id="button1" onclick="createRecord('+product.id+')">Cumpara</button>'
                  +'</div>'
                  +'</div>'
                  +'</div>'
@@ -124,23 +122,18 @@ function showProductsByCategory(categoryId) {
         
 }
 
-//function post
 
-function createRecord(formData) {
+function createRecord(id) {
+    event.preventDefault();
     $.ajax({
-        url: '/orders/',
+        url: '/insert/'+id,
         type: 'POST',
         accepts: {
             json: 'application/json'
         },
         //data:
         success: function(data) {
-            $('#add_new_record_modal').modal('hide');
             
-            var row = '<tr id="row_id_'+ data.id +'">'
-            			+ displayColumns(data)
-        				+ '</tr>';
-            $('#articles').append(row);
         } 
     });
 }

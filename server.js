@@ -71,6 +71,18 @@ app.get('/createdb', (request, response) => {
     })
 })
 
+app.post('/insert/:id', (request, response) => {
+    Selected_Items.create({
+    id_product: request.params.id,
+    isnew: true
+}).then(message => {
+    console.log(message);
+    // you can now access the newly ChatMessage task via the variable message
+}).catch(err => {
+     response.status(500).send('something bad happened')
+})
+})
+
 app.get('/createdata', (req, res) => {
     //TODO add some test data here
 })
@@ -137,7 +149,7 @@ app.get('/selected_items', function(request, response) {
 )
 
 app.delete('/selected_items/:id', function(request, response) {
-    Categories.findByPk(request.params.id).then(function(item) {
+    Selected_Items.findByPk(request.params.id).then(function(item) {
         if(item) {
             item.destroy().then(function(){
                 response.status(204).send()
@@ -181,7 +193,11 @@ app.post('/orders', function(request, response) {
         response.status(201).send(order)
     })
 })
-
+app.post('/selected_items', function(request, response) {
+    Selected_Items.create(request.body).then(function(order) {
+        response.status(201).send(order)
+    })
+})
 app.get('/maincategories/:id/categories', function(request, response) {
     Categories.findAll({
             where:{id_maincategory: request.params.id},

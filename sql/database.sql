@@ -81,9 +81,38 @@ INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,
  values ('26','Rochie cu buline','Rochie scurta. Maneca scurta bufanta, cu pliu. Dublura la interior. Fronseu in fata. Inchidere la spate cu fermoar ascuns de cusatura.', 150, false, null,'https://static.zara.net/photos///2020/I/0/1/p/7385/305/403/2/w/1143/7385305403_6_1_1.jpg?ts=1592896497401');
  
  
+INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('24','Jacheta tricot oversize','Jacheta deschisa. Guler rotund. Maneca lunga. Margini reiate.', 160, false, null,'https://static.zara.net/photos///2020/I/0/1/p/6771/127/802/2/w/1143/6771127802_6_1_1.jpg?ts=1602172774847');
+ INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('24','Pulover cu broderii','Pulover cu guler rotund. Maneca lunga bufanta, cu manseta. Broderii contrastante in fata si pe manecat.', 350, true, 20,'https://static.zara.net/photos///2020/I/0/1/p/0431/111/704/2/w/1143/0431111704_6_1_1.jpg?ts=1602753657120');
+ 
+ INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('25','Tricou cu capse','Tricou cu guler rotund. Maneca lunga. Capse tip polo.', 60, false, null,'https://static.zara.net/photos///2020/I/0/1/p/1044/630/250/2/w/1143/1044630250_2_1_1.jpg?ts=1600861132738');
+  INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('25','Tricou cu imprimeu frontal','Tricou cu guler rotund. Maneca scurta. Imprimeu frontal combinat, de culoare contrastanta.', 50, false, null,'https://static.zara.net/photos///2020/I/0/1/p/5580/191/250/2/w/1143/5580191250_2_1_1.jpg?ts=1600685387805');
+ INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('26','Pantaloni evazati din catifea','Pantaloni cu talie inalta elastica. Partea de jos cu silueta evazata.', 130, false, null,'https://static.zara.net/photos///2020/I/0/1/p/8338/250/800/2/w/1143/8338250800_2_1_1.jpg?ts=1601541477965');
+ 
+ INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('30','Camasa cu structura premium','Camasa regular fit. Guler cu rever si nasturi. Maneca lunga. Manseta cu nasture. Inchidere frontala cu de nasturi.',
+ 160, false, null,'https://static.zara.net/photos///2020/I/0/2/p/5588/404/403/82/w/1143/5588404403_6_1_1.jpg?ts=1596539821015');
+ 
+  INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('30','Camasa denim','Camasa regular fit. Guler cu rever. Maneca lunga. Manseta cu nasture. Buzunare aplicate cu clapa pe piept. Efect prespalat. Inchidere cu capse.',
+ 120, true, 10,'https://static.zara.net/photos///2020/I/0/2/p/8574/499/802/2/w/1143/8574499802_1_1_1.jpg?ts=1595498559004');
+ 
+  
+  INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('31','Pantaloni skinny fit','Pantaloni skinny fit confectionati din tesatura de bumbac cu elasticitate. Buzunare frontale. Buzunare cu paspoal dublu la spate. Inchidere cu fermoar si nasture.',
+ 120, true, 10,'https://static.zara.net/photos///2020/I/0/2/p/6786/450/401/82/w/1143/6786450401_2_1_1.jpg?ts=1593074058260');
+ 
+  INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('33','Rochie cu imprimeu','Rochie cu guler elastic. Margine incretita. Maneca lunga. Imprimeu floral si elastice.',160, false, null,'https://static.zara.net/photos///2020/I/0/3/p/4479/700/630/2/w/1923/4479700630_1_1_1.jpg?ts=1602176980462');
+ 
+  INSERT INTO products (id_category, namep, descriptionp, price, onsale, commsale,image_path) 
+ values ('33','Hanorac cu urs','Hanorac cu guler rotund. Maneca lunga. Imprimeu si aplicatie cu efect de blanain fata.',60,  false, null,'https://static.zara.net/photos///2020/I/0/3/p/3338/106/710/2/w/1143/3338106710_1_1_1.jpg?ts=1601022642785');
  
  
- 
- 
- 
- 
+ insert into selected_items(id_product, isnew) values(23,true);
+  insert into selected_items(id_product, isnew) values(22,true);
+   insert into selected_items(id_product, isnew) values(18,true);
